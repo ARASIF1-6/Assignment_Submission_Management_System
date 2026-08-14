@@ -407,17 +407,17 @@ All protected endpoints require a `Bearer <token>` header obtained from the logi
 ## Demo credentials for easy local setup
 
 ### 👤 Admin
-- Email: admin@school.com  Password: Admin@123
-- Email: dave.bautista@school.edu  Password: Dave123456
+- **Email:** `admin@school.com`  **Password:** `Admin@123`
+- **Email:** `dave.bautista@school.edu`  **Password:** `Dave123456`
 
 ### 👨‍🏫 Teacher
-- Email: jhon@school.com  Password: Jhon123456
-- Email: brock@school.com  Password: Brock123456
+- **Email:** `jhon@school.com`  **Password:** `Jhon123456`
+- **Email:** `brock@school.com`  **Password:** `Brock123456`
 
 ### 🎓 Student
-- Email: roman@school.com  Password: Roman123456
-- Email: randy.orton@school.com  Password: Randy123456
-- Email: morrison@school.com  Password: Morrison123456
+- **Email:** `roman@school.com`  **Password:** `Roman123456`
+- **Email:** `randy.orton@school.com`  **Password:** `Randy123456`
+- **Email:** `morrison@school.com`  **Password:** `Morrison123456`
 
 ---
 
