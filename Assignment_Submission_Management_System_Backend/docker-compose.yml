@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  postgres_db:
+    image: postgres:16-alpine
+    container_name: asms-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-AssignmentSubmissionDb}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-AssignmentSubmissionDb}"]
+      interval: 3s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+    networks:
+      - asms-network
+
+  backend_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asms-backend
+    restart: always
+    ports:
+      - "${BACKEND_PORT:-7051}:7051"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:7051
+      - DB_HOST=postgres_db
+      - DB_PORT=5432
+      - DB_NAME=${POSTGRES_DB:-AssignmentSubmissionDb}
+      - DB_USER=${POSTGRES_USER:-postgres}
+      - DB_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - ConnectionStrings__DefaultConnection=Host=postgres_db;Port=5432;Database=${POSTGRES_DB:-AssignmentSubmissionDb};Username=${POSTGRES_USER:-postgres};Password=${POSTGRES_PASSWORD:-postgres}
+      - JWT_SECRET=${JWT_SECRET:-YourSuperSecretKeyForJWTTokenGenerationMustBeAtLeast32Characters!}
+      - JWT_ISSUER=${JWT_ISSUER:-AssignmentSubmissionApi}
+      - JWT_AUDIENCE=${JWT_AUDIENCE:-AssignmentSubmissionClient}
+      - JWT_EXPIRY_MINUTES=${JWT_EXPIRY:-60}
+    depends_on:
+      postgres_db:
+        condition: service_healthy
+    networks:
+      - asms-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  asms-network:
+    name: asms-network
+    driver: bridge

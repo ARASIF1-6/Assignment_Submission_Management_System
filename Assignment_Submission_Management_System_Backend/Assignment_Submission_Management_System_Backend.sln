@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment_Submission_Management_System_Backend", "Assignment_Submission_Management_System_Backend\Assignment_Submission_Management_System_Backend.csproj", "{FCB55202-25F2-48B1-9634-8B6654CF5485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment_Submission_Management_System_Backend.Tests", "Assignment_Submission_Management_System_Backend.Tests\Assignment_Submission_Management_System_Backend.Tests.csproj", "{9B2F50C1-8C1B-4C67-96A6-976E84F17E30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCB55202-25F2-48B1-9634-8B6654CF5485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB55202-25F2-48B1-9634-8B6654CF5485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB55202-25F2-48B1-9634-8B6654CF5485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB55202-25F2-48B1-9634-8B6654CF5485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B2F50C1-8C1B-4C67-96A6-976E84F17E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B2F50C1-8C1B-4C67-96A6-976E84F17E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B2F50C1-8C1B-4C67-96A6-976E84F17E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B2F50C1-8C1B-4C67-96A6-976E84F17E30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C8D1A6E-4D85-4031-95E5-25F166820E03}
+	EndGlobalSection
+EndGlobal

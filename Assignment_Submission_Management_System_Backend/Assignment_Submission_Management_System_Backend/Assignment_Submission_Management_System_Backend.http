@@ -1,0 +1,48 @@
+@Assignment_Submission_Management_System_Backend_HostAddress = https://localhost:7051
+@token = {{login.response.body.data.token}}
+
+### Login as Admin
+# @name login
+POST {{Assignment_Submission_Management_System_Backend_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@school.com",
+  "password": "Admin@123"
+}
+
+### Register Teacher
+POST {{Assignment_Submission_Management_System_Backend_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "teacher@school.com",
+  "password": "Teacher@123",
+  "firstName": "John",
+  "lastName": "Teacher",
+  "role": "Teacher"
+}
+
+### Get All Classes
+GET {{Assignment_Submission_Management_System_Backend_HostAddress}}/api/classes
+Authorization: Bearer {{token}}
+
+### Create Class (Admin)
+POST {{Assignment_Submission_Management_System_Backend_HostAddress}}/api/classes
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Computer Science 101",
+  "code": "CS101",
+  "description": "Intro to CS",
+  "academicYear": "2025-2026"
+}
+
+### Get All Assignments
+GET {{Assignment_Submission_Management_System_Backend_HostAddress}}/api/assignments
+Authorization: Bearer {{token}}
+
+### Get All Submissions
+GET {{Assignment_Submission_Management_System_Backend_HostAddress}}/api/submissions
+Authorization: Bearer {{token}}
