@@ -22,6 +22,9 @@ A full-stack, role-based web application for managing academic assignments and s
   - [Running with Docker](#running-with-docker)
 - [Running the Tests](#running-the-tests)
 - [API Documentation](#api-documentation)
+- [Live Project URL](#live-project-URL)
+- [Live API/Swagger URL](#live-api/swagger-URL)
+- [Demo credentials for easy local setup](#demo-credentials-for-easy-local-setup)
 
 ---
 
@@ -270,13 +273,13 @@ On first application run, `DbInitializer.SeedAsync` automatically seeds:
 
 ```bash
 cd Assignment_Submission_Management_System_Backend/Assignment_Submission_Management_System_Backend
-dotnet run
+dotnet run --launch-profile https
 ```
 
 The API will be available at:
-- **HTTP:** `http://localhost:5148`
+- **HTTP:** `http://localhost:5196`
 - **HTTPS:** `https://localhost:7051`
-- **Swagger UI:** `https://localhost:7051/swagger`
+- **Swagger UI:** `https://localhost:7051/swagger` or `http://localhost:5196/swagger`
 
 ---
 
@@ -311,6 +314,9 @@ docker compose up -d --build
 Services started:
 - `asms-postgres` — PostgreSQL 16 on port `5432`
 - `asms-backend` — ASP.NET Core API on port `7051`
+
+The API will be available at:
+- **HTTP:** `http://localhost:7051/swagger`
 
 #### Step 2 — Start Frontend
 
@@ -367,7 +373,7 @@ dotnet test Assignment_Submission_Management_System_Backend.Tests/Assignment_Sub
 
 When the backend is running, the interactive Swagger UI is accessible at:
 
-**`https://localhost:7051/swagger`**
+**`https://localhost:7051/swagger`** or **`http://localhost:5196/swagger`**
 
 ### Endpoint Summary
 
@@ -383,3 +389,32 @@ When the backend is running, the interactive Swagger UI is accessible at:
 | **Settings**             | `GET`, `PUT /{key}`                                         |
 
 All protected endpoints require a `Bearer <token>` header obtained from the login endpoint.
+
+---
+
+## Live Project URL
+
+**`https://assignment-submission-management-sy-indol.vercel.app/`**
+
+---
+
+---
+
+## Live Project URL
+
+**`https://assignment-submission-management-sy-indol.vercel.app/`**
+
+---
+
+## Live API/Swagger URL
+
+**`https://assignment-submission-management-system-r8yj.onrender.com/swagger/index.html`**
+
+---
+
+## Demo credentials for easy local setup
+
+**`https://assignment-submission-management-system-r8yj.onrender.com/swagger/index.html`**
+
+---
+
