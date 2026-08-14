@@ -1,6 +1,6 @@
 # Assignment Submission Management System
 
-A full-stack, role-based web application for managing academic assignments and student submissions. The system supports three distinct roles — **Admin**, **Teacher**, and **Student** — each with clearly defined responsibilities and access controls.
+A full-stack, role-based web application for managing academic assignments and student submissions. The system supports three distinct roles - **Admin**, **Teacher**, and **Student** - each with clearly defined responsibilities and access controls.
 
 ---
 
@@ -30,7 +30,7 @@ A full-stack, role-based web application for managing academic assignments and s
 
 ## Project Overview
 
-The **Assignment Submission Management System** is designed to streamline the complete lifecycle of academic assignments — from creation and publishing by teachers, through student submission, to grading and feedback. The platform provides a centralised interface for administrators to manage users, classes, subjects, and system settings, while ensuring strict role-based access at every layer.
+The **Assignment Submission Management System** is designed to streamline the complete lifecycle of academic assignments - from creation and publishing by teachers, through student submission, to grading and feedback. The platform provides a centralised interface for administrators to manage users, classes, subjects, and system settings, while ensuring strict role-based access at every layer.
 
 ---
 
